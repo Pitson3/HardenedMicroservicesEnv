@@ -22,12 +22,12 @@ This is the machine that has docker installed on it and it hosts the containers.
 
 Besides, the following are some of the potential threats here:
 - Tampering, which involves unauthorized changing of the daemon configuration through a compromized client thereby leading to misconfiguration.
-- Information Disclosure, whereby the docker host file system may be misconfigured, thereby exposing sensitive information and leading to insecure defaults.
 
 C. Docker Registry
 This is the store for the docker images. Things that may go wrong here include Image Security, Open Source Software Security and Docker registry security. On the other hand, the potential threats 
 include:
 - Spoofing, whereby the legitimate image or dependences may be replaced with the illegitimate ones. This will then affect image security
+- Denial of service, whereby there may not be proper restrictions on the amount of content accepted by the user with the specific docker distribution
 
 
 Kubernetes Threat Modeling
@@ -59,3 +59,7 @@ That being said, the following are the potential threats here:
 
 Docker-bench Run Results and Analysis
 From the failed findings, select and document 3 findings from the Docker-bench results that you want to harden based on the 5 attack surface areas you identified in Step 1. At least 1 of the 3 hardened findings should be different from the ones mentioned in the exercise (i.e. 5.10, 5.14, and 5.22).
+
+[FAIL] 2.7 Ensure TLS authentication for Docker daemon is configured (Automated)
+[FAIL] 2.14 Ensure containers are restricted from acquiring new privileges (Automated)
+[FAIL] 3.22 Ensure that /etc/default/docker file permissions are set to 644 or more restrictive (Automated)
