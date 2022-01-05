@@ -1,0 +1,7 @@
+How will you test the changes? 
+The change will be tested in a non-production environment.In this case, a staging cluster will be created and all testing will be done there so as to ensure that all of the hardening steps
+were met before committing the changes to the production environment.
+
+How will you ensure the changes don't negatively affect your cluster? 
+In the way that all of the metrics will have to be closely monitored and observed. That is, monitoring and observability tools like Grafana with Prometheus and Jaegar will have to be used for testing 
+in a staging cluster or non production environment so as to ensure that the applied changes on hardening the environment haven't introduced regressive changes.
